@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>My FE assignment</title>
+        <link href ="style.css" rel="stylesheet">
+    </head>
+    <body> 
+        <div class ="container">
+            <form action="#">
+            <h2>Register Now</h2>
+               <label for="fname" >Full Name:</label>
+            <input type="text"  class="infoinput" id="fname"
+placeholder="Enter Fullname"            required>
+            <label for="E-mail" >E-mail:</label>
+            <input type="email"  class="infoinput" id="email" placeholder="example@gmail.com" required>
+               <label for="phonenumber" >Phone Number:</label>
+            <input type="tel"  class="infoinput" id="telphone" placeholder="+234 8123456789" required>
+            <div class ="gender">
+            <input type="radio" class="sex"  id="male" name="sex">
+            <label for="gender" style="padding-left:5px" >Male</label>
+               <input type="radio"  class="sex" id="female" name="sex">
+            <label for="gender" style="padding-left:5px" >Female</label>
+            </div>
+                 <label for="password" >Password:</label>
+            <input type="password"  class="infoinput" id="pwd" placeholder="Enter Password">
+            <button type="submit" value="register" onClick = "function valiDateForm()" >Register</button>
+       </form>
+        </div>
+        <script src="script2.js"></script>
+    </body>
+</html>

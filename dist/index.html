@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second tailwind nav bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .register{
+            border: 1px  red;
+            border-radius: 50px;
+            border-style: double;
+           
+        }
+        .register:hover{
+            background-color: rgb(220,38,38);
+            transition-duration: 0.5s;;
+            transition-timing-function: ease-in-out;
+        }
+        .content{
+            height: 30rem;
+        }
+        .show{
+            display: block;
+          }  
+        .learnbtn{
+            border: 1.5px solid red;
+            
+        }
+        .learnbtn:hover{
+            transition-duration: 0.5s;;
+            transition-timing-function: ease-in-out;
+        }
+       @media screen and  (max-width:767px){
+        .nav-bar{
+            display:none;
+        }
+       .dropdown:hover.dropdown-content{
+        display: block;
+            }
+         
+       }
+       
+        @media screen and  (max-width:640px){
+             h1{
+                padding-top: 20px;
+                text-align: center;
+             }
+             .icons{
+               margin-top: 40px;
+               
+             }
+             .content{
+                margin-top: 30px;
+             }
+             .learnbtn{
+                margin:0 40px;
+             }
+          }
+    </style>
+</head>
+<body class=" sha">
+<div class="relative min-h-screen md:flex">
+    <!--mobile menu bar-->
+    <div class="bg-gray-200  text-gray-100 flex justify-between md:hidden">
+         <!--logo-->
+         <a href="#" class="flex items-center text-red-600 space-x-1 px-4 ">
+            <svg width="12" height="41" viewBox="0 0 12 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 40.2857C8.8174 40.2857 5.76516 38.1635 3.51472 34.386C1.26428 30.6085 1.11399e-06 25.4851 8.80472e-07 20.1429C6.46956e-07 14.8006 1.26428 9.67722 3.51472 5.89971C5.76515 2.12219 8.8174 -3.85421e-07 12 -5.24537e-07L12 40.2857Z" fill="#DC3442"/>
+                </svg>
+                <svg width="13" height="41" viewBox="0 0 13 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.571533 40.2857C3.75413 40.2857 6.80638 38.1635 9.05681 34.386C11.3073 30.6085 12.5715 25.4851 12.5715 20.1429C12.5715 14.8006 11.3073 9.67722 9.05681 5.89971C6.80638 2.12219 3.75413 -6.45259e-07 0.571534 -8.78162e-07L0.571533 40.2857Z" fill="#DC3442"/>
+                    </svg>
+                <span class="text-3xl font-medium ">Dicta</span>
+        </a>
+          <!--mobile menu button-->
+          <button class=" mobile-menu-button   md:p-4 mr-10 focus:outline-none ">
+            <svg class="w-6 h-6 m-4 text-black" x-show="! showMenu" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" viewBox="0 00 24 24" stroke="currentColor"><path d="m4 6h16M4 12h16M4 18h16"></path>
+     </svg>
+          </button>
+    </div>
+  <!--sidebar-->
+  <div class="sidebar  text-blue-100 w-64 space-y-6 bg-gray-300 md:hidden
+   py-7 px-2 absolute inset-y-0 left-0 transform  -translate-x-full md:relative  md:translate-x-0
+    transition duration-200 ease-in-out z-10 ">
+ <!--logo-->
+<a href="#" class="flex items-center text-red-600 space-x-1 px-4 ">
+    <svg width="12" height="41" viewBox="0 0 12 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 40.2857C8.8174 40.2857 5.76516 38.1635 3.51472 34.386C1.26428 30.6085 1.11399e-06 25.4851 8.80472e-07 20.1429C6.46956e-07 14.8006 1.26428 9.67722 3.51472 5.89971C5.76515 2.12219 8.8174 -3.85421e-07 12 -5.24537e-07L12 40.2857Z" fill="#DC3442"/>
+        </svg>
+        <svg width="13" height="41" viewBox="0 0 13 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.571533 40.2857C3.75413 40.2857 6.80638 38.1635 9.05681 34.386C11.3073 30.6085 12.5715 25.4851 12.5715 20.1429C12.5715 14.8006 11.3073 9.67722 9.05681 5.89971C6.80638 2.12219 3.75413 -6.45259e-07 0.571534 -8.78162e-07L0.571533 40.2857Z" fill="#DC3442"/>
+            </svg>
+        <span class="text-3xl font-medium ">Dicta</span>
+</a>
+   <!--nav-->
+   <nav>
+    <div class=" dropdown inline-block relative">
+   <button class=" dropbtn text-black py-2.5 px-4 flex items-center focus:bg-blue-300 " onclick="myFunction()" >Features <svg class="h-5 w-5 ml-1 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+    fill="currentColor"><path fill-rule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10
+        10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        clip-rule="evenodd" /></svg></button>
+   <div class="  dropdown-content hidden absolute  w-40 overflow-auto bg-white rounded-md shadow-lg z-20 " id="myDropdown">
+    <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Todo list</a>
+    <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Calender</a>
+    <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Reminder</a>
+    <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Planning</a>
+   </div>
+    </div>
+    <div class=" dropdown inline-block relative">
+        <button class=" dropbtn2 text-black py-2.5 px-4 flex items-center focus:bg-blue-300 " onclick="myFunction2()" >Company <svg class="h-5 w-5 ml-1 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+         fill="currentColor"><path fill-rule="evenodd"
+             d="M5.293 7.293a1 1 0 011.414 0L10
+             10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+             clip-rule="evenodd" /></svg></button>
+        <div class="  dropdown-content hidden absolute  w-40 overflow-auto bg-white rounded-md shadow-lg z-10 "  id="myDropdown2">
+         <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">History</a>
+         <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Blog</a>
+         <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Our team</a>
+        </div>
+         </div>
+    <a href="#" class="block py-2.5  px-4  text-black rounded transition duration-200 hover:bg-blue-500">Career</a>
+    <a href="#" class="block py-2.5  px-4  text-black rounded transition duration-200 hover:bg-blue-500">About</a>
+    <a href="#" class="block py-2.5  px-4  text-black rounded transition duration-200 hover:bg-blue-500">Login</a>
+    <button><a href="/login/index.html" class="block py-2.5 mt-3 px-4  text-red-600 font-semibold text-xl  rounded transition duration-200 hover:bg-blue-500">Register</a></button>
+</nav>
+  </div>
+   <!--content-->
+<div class=" w-full">
+   <div class=" lg:block nav-bar px-20 w-full h-20      ">
+    <div class="flex justify-between">
+     <div class="flex space-x-4 items-center">
+        <!--logo-->
+        <div class="mr-4 ">
+            <a href="#" class="flex items-center px-2 py-4 text-gray-700">
+                <img src="images/img2.png" class="w-6 h-9">
+                <span class="text-4xl font-medium text-red-600">Dicta</span>
+            </a>
+        </div>
+     
+    <!--primary nav-->
+      <div class="flex items-center space-x-1 " >
+        <div class=" dropdown inline-block relative">
+            <button class=" dropbtn3 text-black  py-2.5 px-4 flex items-center focus:bg-blue-300 focus:outline-none " onclick="myFunction3()" >Features <svg class="h-5 w-5 ml-1 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+             fill="currentColor"><path fill-rule="evenodd"
+                 d="M5.293 7.293a1 1 0 011.414 0L10
+                 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                 clip-rule="evenodd" /></svg></button>
+            <div class="  dropdown-content hidden absolute  w-40 overflow-auto bg-white rounded-md shadow-lg z-10 " id="myDropdown3">
+             <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Todo list</a>
+             <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Calender</a>
+             <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Reminder</a>
+             <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Planning</a>
+            </div>
+             </div>
+             <div class=" dropdown inline-block relative">
+                <button class=" dropbtn4 text-black py-2.5 px-4 flex items-center focus:bg-blue-300 " onclick="myFunction4()" >Company <svg class="h-5 w-5 ml-1 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                 fill="currentColor"><path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10
+                     10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd" /></svg></button>
+                <div class="  dropdown-content hidden absolute  w-40 overflow-auto bg-white rounded-md shadow-lg z-10 "  id="myDropdown4">
+                 <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">History</a>
+                 <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Blog</a>
+                 <a href="#" class="block text-black p-2 text-center hover:bg-slate-400">Our team</a>
+                </div>
+                 </div>
+           
+        <a href="#" class="py-4 px-3 text-lg text-black hover:text-gray-900">Career</a>
+        <a href="#" class="py-4 px-3 text-lg text-black hover:text-gray-900">About</a>
+
+    </div> 
+     </div>
+    <!--secondary nav-->
+    <div class="flex items-center  space-x-7">
+    <a href="" class="py-4 px-3 text-xl">Login</a>
+    <button class="register  px-8 py-2"><a href="/login/index.html" class="  text-red-600 font-normal text-sm p-2 hover:text-white">Register</a></button>
+
+    </div>
+    <!--mobile button goes here-->
+</div>
+   </div>
+<div class=" content   w-4/5  mx-auto lg:mt-20 lg:flex  lg:justify-between lg:space-x-12 sm:block"> 
+    <div class="lg:w-2/5  "><img src="images/img1.png" class="lg:pb-20  lg:h-full  lg:w-full sm:h-80  "></div>
+
+   <div class=" sm:p-4 lg:p-0 lg:px-10 lg:w-3/5"> <h1 class=" text-4xl sm:text-6xl  "> Make<br>Remote Work</h1><p class=" py-5 ">Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Incidunt esse enim dolorum culpa distinctio sint suscipit minima quidem numquam voluptates! Lorem ipsum dolor sit
+     amet consectetur adipisicing elit. Dolores, nam obcaecati ipsam autem cum eaque porro itaque sed sunt nobis.</p>
+    <button class=" learnbtn bg-red-600  rounded-lg px-8 py-3 hover:bg-transparent sm:mx-auto "><a href="#" class="  text-white font-medium text-sm hover:text-red-600 ">Learn More</a></button>
+   <div class="icons  flex space-x-9 lg:mt-4 md:mt-8 sm:text-center">
+          <img src="images/img3.png " class="w-9 h-9">
+          <img src="images/img4.jpg" class="w-9 h-9">
+          <img src="images/img5.jpg" class="w-9 h-9">
+          <img src="images/img6.jpg" class="w-9 h-9">
+   </div>
+    </div>
+
+</div>
+<script src="script.js"></script> 
+</body>
+</html>
