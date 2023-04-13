@@ -15,12 +15,11 @@ h1{font-size:45px;
     width:23rem;
     height:40rem;
     background: white;  
-    margin:100px;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 100px auto;
     border-radius:11px;
     box-shadow:   5px 8px 10px 7px #e7e5e5;
     border: 2px solid grey;
+    align-items: center;
 }
 h2{font-size:35px;
    color:#c43a22;
@@ -41,11 +40,12 @@ input{
     margin-left:30px;
     width:18rem;
     outline:none;
-    background: #c2bfbe;
+    background: #e4dcd9;
     border:none;
     height:2.7rem;
     border-radius:7px;
     font-size:20px;
+    
 }
 form button{
     margin:40px 6rem;
@@ -68,9 +68,9 @@ form button:hover{
 .gender {  display:flex;
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:640px){
   .container{
-    width:fit-content;
-    margin: 0;
+    width: 100%;
+    margin:10px;
   }
 }

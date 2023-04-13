@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second tailwind nav bar</title>
     <link rel="stylesheet" href="dist/styles.css" >
+    <link rel="stylesheet" href="dist/font.css">
     <style>
         .register{
             border: 1px  red;
@@ -30,6 +31,13 @@
         .learnbtn:hover{
             transition-duration: 0.5s;;
             transition-timing-function: ease-in-out;
+        }
+        @font-face {
+            font-family: myfont;
+            src: url(aquatico.otf);
+}
+        h1{
+            font-family:myfont;
         }
        @media screen and  (max-width:767px){
         .nav-bar{
@@ -124,7 +132,7 @@
     <a href="#" class="block py-2.5  px-4  text-black rounded transition duration-200 hover:bg-blue-500">Career</a>
     <a href="#" class="block py-2.5  px-4  text-black rounded transition duration-200 hover:bg-blue-500">About</a>
     <a href="#" class="block py-2.5  px-4  text-black rounded transition duration-200 hover:bg-blue-500">Login</a>
-    <button><a href="/login/index.html" class="block py-2.5 mt-3 px-4  text-red-600 font-semibold text-xl  rounded transition duration-200 hover:bg-blue-500">Register</a></button>
+    <button><a href="/login/index.html" class="block py-2.5 mt-3 px-4  text-red-600 font-semibold text-xl  rounded transition duration-200 ">Register</a></button>
 </nav>
   </div>
    <!--content-->
